@@ -1,0 +1,42 @@
+{% extends "base.html" %} 
+{% block title %} 
+Listar Productos 
+{% endblock %} 
+{% block content %}
+
+{% include "agregar.html" %} 
+
+
+<table class="table table-striped">
+  <thead>
+    <tr class="table-secondary">
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for producto in productos %}
+    <tr>
+      <th scope="row">{{ producto.id }}</th>
+      <td>{{ producto.nombre }}</td>
+      <td>{{ producto.precio }}</td>
+      <td>{{ producto.cantidad }}</td>
+      <!-- <td><a href="editar/{{producto.id}}" class="btn btn-primary">Editar</a></td> -->
+      <td>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editarModal{{ producto.id }}">
+          Editar Producto
+        </button>
+        {% include "editar.html" with producto=producto %}
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarModal{{ producto.id }}">
+          Eliminar
+        </button>
+        {% include "eliminar.html" with producto=producto %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
