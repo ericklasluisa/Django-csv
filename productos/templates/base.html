@@ -13,6 +13,19 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
+
+    <style>
+        .datatable-pagination .datatable-active a,
+        .datatable-pagination .datatable-active a:focus,
+        .datatable-pagination .datatable-active a:hover,
+        .datatable-pagination .datatable-active button,
+        .datatable-pagination .datatable-active button:focus,
+        .datatable-pagination .datatable-active button:hover {
+            background-color: #474747;
+            cursor: default;
+        }
+    </style>
+    
 </head>
 
 <body data-bs-theme="dark">
@@ -37,6 +50,7 @@
             searchable: true,
             fixedHeight: true,
             perPage: 5,
+            
         });
     </script>
 </body>
