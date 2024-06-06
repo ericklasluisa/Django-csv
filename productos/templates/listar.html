@@ -6,6 +6,13 @@ Listar Productos
 
 {% include "agregar.html" %} 
 
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#importarCSV">
+  Importar Archivo CSV
+</button>
+
+<a href="exportar/" class="btn btn-secondary">Exportar Archivo CSV</a>
+
+{% include "importar_csv.html" %}
 
 <table class="table table-striped">
   <thead>
@@ -24,7 +31,6 @@ Listar Productos
       <td>{{ producto.nombre }}</td>
       <td>{{ producto.precio }}</td>
       <td>{{ producto.cantidad }}</td>
-      <!-- <td><a href="editar/{{producto.id}}" class="btn btn-primary">Editar</a></td> -->
       <td>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editarModal{{ producto.id }}">
           Editar Producto
