@@ -1,4 +1,4 @@
-# Inventario en Django
+# Ejercicio 2 Prueba Desarrollo Web Avanzado - Aplicación con Django
 
 ## Grupo #6
 
@@ -8,7 +8,7 @@
 
 ## Descripción
 
-Este proyecto es un inventario de productos, donde se pueden agregar, editar y eliminar productos. Además, se pueden ver los detalles de cada producto.
+Este proyecto es un inventario de productos, donde se pueden agregar, editar y eliminar productos, dentro de la lista de productos se puede ordenar los productos por el nombre, por el precio o por las cantidades, así como buscar un producto en específico. También se puede importar o exportar los datos de los productos en formato CSV.
 
 ## Requerimientos
 
@@ -31,10 +31,3 @@ Este proyecto es un inventario de productos, donde se pueden agregar, editar y e
 3. Agregar, editar o eliminar productos
 4. Ver los detalles de cada producto
 
-## Licencia
-
-MIT License
-
-## Autor
-
-Diego Saavedra
